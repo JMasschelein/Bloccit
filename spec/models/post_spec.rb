@@ -8,8 +8,9 @@ RSpec.describe Post, type: :model do
 
    let(:topic) { Topic.create!(name: name, description: description) }
 
-   let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "helloworld") }
-   let(:post) { topic.posts.create!(title: title, body: body, user: user) }
+   let(:topic) { create(:topic) }
+   let(:user) { create(:user) }
+   let(:post) { create(:post) }
    
 
    it { is_expected.to have_many(:comments) }
@@ -29,7 +30,7 @@ RSpec.describe Post, type: :model do
  
    describe "attributes" do
      it "has a title, body, and user attribute" do
-       expect(post).to have_attributes(title: title, body: body, user: user)
+       expect(post).to have_attributes(title: post.title, body: post.body)
      end
    end
    
