@@ -1,13 +1,12 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
+
    has_many :posts, dependent: :destroy
    has_many :comments, dependent: :destroy
    has_many :votes, dependent: :destroy
    
-=======
     has_many :posts
     has_many :favorites, dependent: :destroy
->>>>>>> checkpoint31
+
    before_save { self.email = email.downcase if email.present? }
    before_save { self.role ||= :member }
 

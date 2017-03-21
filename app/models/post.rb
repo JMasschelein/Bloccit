@@ -2,11 +2,9 @@ class Post < ApplicationRecord
     belongs_to :topic, optional: true
     belongs_to :user, optional: true
     has_many :comments, dependent: :destroy
-<<<<<<< HEAD
     has_many :votes, dependent: :destroy
-=======
     has_many :favorites, dependent: :destroy
->>>>>>> checkpoint31
+
     
     default_scope { order('rank DESC') }
     

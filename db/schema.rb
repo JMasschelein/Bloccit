@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170321141413) do
-=======
 ActiveRecord::Schema.define(version: 20170321142213) do
->>>>>>> checkpoint31
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -24,8 +20,6 @@ ActiveRecord::Schema.define(version: 20170321142213) do
     t.integer  "user_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-<<<<<<< HEAD
-=======
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -35,7 +29,6 @@ ActiveRecord::Schema.define(version: 20170321142213) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_favorites_on_post_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
->>>>>>> checkpoint31
   end
 
   create_table "posts", force: :cascade do |t|

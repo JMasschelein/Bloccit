@@ -4,12 +4,10 @@ RSpec.describe User, type: :model do
    let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "password") }
    
    it { is_expected.to have_many(:posts) }
-<<<<<<< HEAD
    it { is_expected.to have_many(:comments) }
    it { is_expected.to have_many(:votes) }
-=======
+
    it { is_expected.to have_many(:favorites) }
->>>>>>> checkpoint31
    
    # Shoulda tests for name
    it { is_expected.to validate_presence_of(:name) }
@@ -85,8 +83,6 @@ RSpec.describe User, type: :model do
      it "should be an invalid user due to blank email" do
        expect(user_with_invalid_email).to_not be_valid
      end
-<<<<<<< HEAD
-=======
    end
    
    describe "#favorite_for(post)" do
@@ -103,6 +99,5 @@ RSpec.describe User, type: :model do
        favorite = user.favorites.where(post: @post).create
        expect(user.favorite_for(@post)).to eq(favorite)
      end
->>>>>>> checkpoint31
    end   
 end
