@@ -2,6 +2,7 @@ class Post < ApplicationRecord
     belongs_to :topic, optional: true
     belongs_to :user
     has_many :comments, dependent: :destroy
+    has_many :favorites, dependent: :destroy
     
     default_scope { order('created_at DESC') }
     
