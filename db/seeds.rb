@@ -29,8 +29,7 @@ require 'random_data'
      body:   RandomData.random_paragraph
    )
    
-   post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
-   rand(1..5).times { post.votes.create!(value: [-1, 1].sample, user: users.sample) }   
+
    
  end
  posts = Post.all
@@ -56,6 +55,13 @@ require 'random_data'
  member = User.create!(
    name:     'Member User',
    email:    'member@example.com',
+   password: 'helloworld'
+ )
+ 
+  # Create a moderator
+ moderator = User.create!(
+   name:     'Moderator User',
+   email:    'moderator@example.com',
    password: 'helloworld'
  )
  
