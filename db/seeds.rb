@@ -47,7 +47,7 @@ require 'random_data'
  # Create an admin user
  admin = User.create!(
    name:     'Admin User',
-   email:    'admin@example.com',
+   email:    'jeroen.masschelein@gmail.com',
    password: 'helloworld',
    role:     'admin'
  )
@@ -56,14 +56,16 @@ require 'random_data'
  member = User.create!(
    name:     'Member User',
    email:    'member@example.com',
-   password: 'helloworld'
+   password: 'helloworld',
+   role: 'member'
  )
  
   # Create a moderator
  moderator = User.create!(
    name:     'Moderator User',
    email:    'moderator@example.com',
-   password: 'helloworld'
+   password: 'helloworld',
+   role: 'moderator'
  )
  
  puts "Seed finished"
