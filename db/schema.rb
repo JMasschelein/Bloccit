@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327203443) do
+ActiveRecord::Schema.define(version: 20170327212004) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20170327203443) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_favorites_on_post_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "paid_posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "price"
+    t.integer  "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_paid_posts_on_topic_id"
   end
 
   create_table "post_sponsoreds", force: :cascade do |t|
