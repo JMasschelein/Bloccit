@@ -10,5 +10,7 @@ class Vote < ApplicationRecord
    def update_post
      post.update_rank
    end  
+   
+   
   
 end
