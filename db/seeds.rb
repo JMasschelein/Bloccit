@@ -52,6 +52,14 @@ require 'random_data'
    role:     'admin'
  )
  
+  # Create an admin user
+ admin = User.create!(
+   name:     'Admin User Test',
+   email:    'bloctest.jeroen@gmail.com',
+   password: 'helloworld',
+   role:     'admin'
+ )
+ 
  # Create a member
  member = User.create!(
    name:     'Member User',
