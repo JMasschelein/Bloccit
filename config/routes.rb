@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
     
    resources :topics do
-     resources :sponsored_posts
+     
      resources :posts, except: [:index]
+     resources :sponsored_posts
    end
    
    resources :users, only: [:new, :create, :show]

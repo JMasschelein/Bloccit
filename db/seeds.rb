@@ -40,7 +40,8 @@ require 'random_data'
 
    sponsored_post = SponsoredPost.create!(
      title:  RandomData.random_sentence,
-     body:   RandomData.random_paragraph
+     body:   RandomData.random_paragraph,
+     price:50
    )
  
  end

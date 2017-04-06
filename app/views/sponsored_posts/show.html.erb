@@ -1,2 +1,10 @@
-<h1>SponsoredPosts#show</h1>
-<p>Find me in app/views/sponsored_posts/show.html.erb</p>
+ <h1><%= @sponsored_post.title %> test sponsored_post</h1>
+ <p><%= @sponsored_post.body %></p>
+ 
+              <%= link_to sponsored_post.title, topic_post_path(@topic, sponsored_post) %>
+           </h4>
+           <small>
+             submitted <%= time_ago_in_words(sponsored_post.created_at) %> 
+           </small>
+           <%= link_to "New Post", new_topic_sponsored_post_path(@topic), class: 'btn btn-success' %>
+           <%= link_to "Edit", edit_topic_sponsored_post_path(@sponsored_post.topic, @sponsored_post), class: 'btn btn-success' %>

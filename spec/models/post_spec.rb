@@ -5,6 +5,7 @@ RSpec.describe Post, type: :model do
    let(:description) { RandomData.random_paragraph }
    let(:title) { RandomData.random_sentence }
    let(:body) { RandomData.random_paragraph }
+   let(:vote) { create(:vote) }
 
    let(:topic) { Topic.create!(name: name, description: description) }
 
