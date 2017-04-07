@@ -1,24 +1,12 @@
-# README
+# Bloccit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A rails platform of which you find the features below.
 
-Things you may want to cover:
 
-* Ruby version
+* Topics with posts (CRUD) by user
 
-* System dependencies
+* Commenting
 
-* Configuration
+* Favoriting of post (publisher receives notification email)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* See published posts and comments by user
